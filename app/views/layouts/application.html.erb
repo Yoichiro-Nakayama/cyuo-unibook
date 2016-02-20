@@ -62,56 +62,40 @@
                    <li>
                         <a href="#contact">検索ボックス</a>
                     </li>
+
+
                     <% if user_signed_in? %>
                         <li>
                             <%= link_to "出品する", new_user_session_path %>
                         </li>
 
+                            <div class="dropdown">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                マイページ
+                                <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                              <li><%= link_to "マイページ","#" %></li>
+                                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                                <li><%= link_to "取引中","#" %></li>
+                                <li><%= link_to "出品中","#" %></li>
+                              </ul>
+                            </div>
+                                 <%else%>
+                                    <li>
+                                        <%= link_to "出品する", new_user_session_path %>
+                                    </li>
 
-                <!--           <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            マイページ
-                            <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete  %></li>
-                          </ul>
-                            </div> -->
-
-<div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropup
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
+                                    <li>
+                                        <%= link_to "新規登録", new_user_registration_path %>
 
 
-                          <li>
-                                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-                         </li>
+                                    </li>
+                                    <li>
+                                        <%= link_to "ログイン", new_user_session_path %>
+                                    </li>
 
-                     <%else%>
-                        <li>
-                            <%= link_to "出品する", new_user_session_path %>
-                        </li>
-
-                        <li>
-                            <%= link_to "新規登録", new_user_registration_path %>
-
-
-                        </li>
-                        <li>
-                            <%= link_to "ログイン", new_user_session_path %>
-                        </li>
-
-                     <%end%>
+                                 <%end%>
                 </ul>
             </div>
               <ul class="nav nav-pills">

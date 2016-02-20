@@ -7,7 +7,7 @@
 
 
 .disabled { padding-left: 90px;}
-.navbar-brand .topnav h2 { padding-top: 0px; }
+.navbar-brand .topnav  h2 { margin-bottom: 30px; }
 
 .profile-box {
 }
@@ -20,6 +20,7 @@ background-repeat: no-repeat;
   height: 800px;
   margin-top: 90px;
 }
+
 
 
 
@@ -49,3 +50,6 @@ margin: 150px auto 200px  ;
 
 .row { margin: auto 0; margin-top: 150px; margin: auto ;
 }
+
+
+.dropdown { float: left; margin-top: 5px;}
