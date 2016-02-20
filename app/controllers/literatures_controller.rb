@@ -1,0 +1,2 @@
+class LiteraturesController < ApplicationController
+end

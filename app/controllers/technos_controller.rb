@@ -1,0 +1,2 @@
+class TechnosController < ApplicationController
+end
