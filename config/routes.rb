@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :literatures, only: [:index, :show]
   resources :sciences, only: [:index, :show]
   resources :technos, only: [:index, :show]
+  resources :users, only: [:show, :edit, :update]
 
   root 'top#index'
 end
