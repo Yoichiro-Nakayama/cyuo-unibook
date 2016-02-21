@@ -7,13 +7,13 @@
                     ユーザー情報</div>
                       <div class="panel-body">
 
-                        <%= form_for @products do |f| %> 
+                      <!--   <%= form_for @products do |f| %>
                         <h2>出品情報</h2>
                           <div class="form-group">
                             <div class="col-lg-12">
                              <p>教科書画像</p>
                                 <div class="form-group file">
-                                  <%= f.file_field :avatar, class: "form-control floating-label", placeholder: "画像アップロード" %>
+                                  <%= f.file_field :image_url, class: "form-control floating-label", placeholder: "画像アップロード" %>
                                 </div>
                               </div>
 
@@ -58,11 +58,8 @@
                           </div>
 
 
-                       <% end %>
-                      <!-- <div class="actions">
-                         <button type="button" class="btn btn-primary"><%= link_to "更新する", edit_user_path(current_user) %></button>
+                       <% end %> -->
 
-                      </div> -->
 
                       </div>
 
