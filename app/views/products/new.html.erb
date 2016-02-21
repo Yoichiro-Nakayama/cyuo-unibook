@@ -1,13 +1,14 @@
 <div class="top_header">
   <div class="container">
       <div class="row">
-          <div class="col-md-4 col-md-offset-7">
+         <div class="col-lg-6 col-md-offset-6">
+
               <div class="panel panel-default">
                   <div class="panel-heading">
                     ユーザー情報</div>
                       <div class="panel-body">
 
-                      <!--   <%= form_for @products do |f| %>
+                  <%= form_for @product  do |f| %>
                         <h2>出品情報</h2>
                           <div class="form-group">
                             <div class="col-lg-12">
@@ -21,44 +22,30 @@
                       <div class="col-lg-12">
                         <p>値段</p>
                            <%= f.text_field :price, placeholder: "値段", class: "form-control" %>
-                      </div>
+                         </div>
+
+                              <div class="col-lg-12">
+                             <p>学部</p>
+                            <%= f.select :price , [['法学部','法学部'],['商学部','商学部'],['経済学部','経済学部'],['文学部','文学部'],['総合政策学部','総合政策学部'],['理工学部','理工学部']] %>
+                              </div>
 
                            <div class="col-lg-12">
-                             <p>学部名</p>
-                               <%= f.text_field :major, placeholder: "学部名", class: "form-control" %>
-                          </div>
-
-
-
-                            <div class="col-lg-12">
-                              <p>教授名</p>
-                               <%= f.text_field :professor, placeholder: "教授名",  class: "form-control" %>
-                           </div>
-
-
-                           <div class="col-lg-12">
-                              <p>詳細</p>
-                               <%= f.text_field :detail, placeholder: "商品詳細",  class: "form-control" %>
+                             <p>送料負担</p>
+                            <%= f.select :price , [['販売者負担','販売者負担'],['買い手負担','買い手負担'],['大学で手渡し0円','大学で手渡し0円']] %>
                            </div>
 
                              <div class="col-lg-12">
-                              <p>発送方法</p>
-                               <%= f.text_field :sent, placeholder: "発送の方法を選択してください",  class: "form-control" %>
-                           </div>
+                             <p>配送方法</p>
 
-                            <div class="col-lg-12">
-                              <p>送料負担</p>
-                               <%= f.text_field :sentprice, placeholder: "送料負担" , class: "form-control" %>
-                           </div>
-
-
+                            <%= f.select :price , [['大学で手渡し0円','大学で手渡し0円'],['商学部','商学部'],['経済学部','経済学部']] %>
+                             </div>
 
 
                             <%= f.submit "出品する", class: "btn btn-primary withripple maipe-ji" %>
                           </div>
 
 
-                       <% end %> -->
+                       <% end %>
 
 
                       </div>

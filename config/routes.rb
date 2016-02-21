@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :sciences, only: [:index, :show]
   resources :technos, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
-  resources :products, only: [:show, :edit, :update, :new]
+  resources :products, only: [:show, :edit, :update, :new, :create]
 
   root 'top#index'
 end
