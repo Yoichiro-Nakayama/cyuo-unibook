@@ -1,3 +1,34 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.top-height { heirht: 200px;}
+
+.main-introcontents { height: 500px; width: 500px; margin: 300px 0px 300px 0 ; background-color: white; }
+
+
+
+.info-top { text-align: center; padding-top :10px; }
+
+
+.profile-page { margin: auto 0; text-align: center;}
+
+.intro-size { font-size: 20px;}
+
+.intro-size { backgroung-color: gray; width: 400px; height: 100px; }
+
+
+.panel-body { text-align: center; }
+
+.image {
+
+      height: 150px;
+      border: 4px solid #fff;
+
+      background-size: cover;
+      background-position: center center;
+
+    }
+
+.edit_user { margin: auto 0;}
