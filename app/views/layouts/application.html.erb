@@ -1,44 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>UNIBOOK</title>
 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= csrf_meta_tags %>
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/landing-page.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery-fixHeightSimple.js"></script> -->
 </head>
-
-</head>
-<body>
-
+<body data-no-turbolink="true">
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -50,7 +39,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
                 <!-- <a class="navbar-brand topnav" href="root_path"><h2>UNIBOOK</h2></a> -->
                 <%= link_to root_path, class: "navbar-brand topnav" do %>
                     <h2>UNIBOOK</h2>
@@ -62,13 +50,10 @@
                    <li>
                         <a href="#contact">検索ボックス</a>
                     </li>
-
-
                     <% if user_signed_in? %>
                         <li>
                             <%= link_to "出品する", new_product_path %>
                         </li>
-
                             <div class="dropdown">
                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 マイページ
@@ -88,13 +73,10 @@
 
                                     <li>
                                         <%= link_to "新規登録", new_user_registration_path %>
-
-
                                     </li>
                                     <li>
                                         <%= link_to "ログイン", new_user_session_path %>
                                     </li>
-
                                  <%end%>
                 </ul>
             </div>
@@ -105,17 +87,13 @@
         <li role="presentation" class="disabled" ><%= link_to "文学部", literatures_path %></li>
         <li role="presentation" class="disabled" ><%= link_to "総合政策学部", sciences_path %></li>
         <li role="presentation" class="disabled" ><%= link_to "理工学部", technos_path %></li>
-
       </ul>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 <%= bootstrap_flash %>
-
-
   <%= yield %>
-
 <footer>
         <div class="container">
             <div class="row">
@@ -142,15 +120,10 @@
             </div>
         </div>
     </footer>
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-
-
-
 </body>
 </html>

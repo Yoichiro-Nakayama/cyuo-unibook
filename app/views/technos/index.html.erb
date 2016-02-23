@@ -1,0 +1,31 @@
+<div class="center-block">
+  <div class="top_header_product">
+    <div class="container">
+        <div class="row">
+           <div class=" .col-xs-6 .col-xs-offset-3">
+                <div class="panel panel-default">
+                 <div class="col-md-12">
+                      <% @products.each do |product|%>
+                  <div class="col-md-4">
+                    <div class="row">
+                        <div class="thumbnail">
+                           <%= image_tag  product.image_url %>
+                        <div class="caption">
+                          <h4><%= product.text_name %></h4>
+                          <h4><%= product.professor %></h4>
+                          <p><%= product.price %>円</p>
+                          <p><%= link_to "詳細を見る", "#" , class: "btn btn-primary", role: "button"%></p>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                   <% end %>
+                  </div>
+                   <%= paginate(@products) %>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
