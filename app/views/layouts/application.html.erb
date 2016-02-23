@@ -57,7 +57,7 @@
  -->
                           <div id="search_form_box">
                             <%= form_tag( '/products/search', method: :post) do %>
-                            <input class="input-medium search-query" name="q" placeholder="キーワードから探す" type="text" value="<%= params[:q] %>">
+                            <input class="input-medium search-query" name="q" placeholder="教科書名で検索する" type="text" value="<%= params[:q] %>">
                             <input class="btn-search" alt="検索" value="検索" type="submit">
                             <% end %>
                         </div>

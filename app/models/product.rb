@@ -25,4 +25,5 @@ class Product < ActiveRecord::Base
   #   end
 # validates_acceptance_of :terms_of_service
 #  validates_acceptance_of :text_name, message: '記入してください'
-  end
+
+end
