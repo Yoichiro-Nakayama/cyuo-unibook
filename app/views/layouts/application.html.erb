@@ -48,11 +48,24 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                    <li>
-                        <a href="#contact">検索ボックス</a>
+                        <!-- <div id="search_form_box">
+                            <form class="form-search" action="products/search" method="get" role="search">
+                            <input class="input-medium search-query" name="q" placeholder="キーワードから探す" type="text" value="<%= params[:q] %>">
+                            <input class="btn-search" alt="検索" value="検索" type="submit">
+                            </form>
+                        </div>
+ -->
+                          <div id="search_form_box">
+                            <%= form_tag( '/products/search', method: :post) do %>
+                            <input class="input-medium search-query" name="q" placeholder="キーワードから探す" type="text" value="<%= params[:q] %>">
+                            <input class="btn-search" alt="検索" value="検索" type="submit">
+                            <% end %>
+                        </div>
+ 
                     </li>
                     <% if user_signed_in? %>
                         <li>
-                            <%= link_to "出品する", new_product_path %>
+                            <%= link_to "出品する", new_product_path, class: "header-pro" %>
                         </li>
                             <div class="dropdown">
                               <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,14 +81,14 @@
                             </div>
                                  <%else%>
                                     <li>
-                                        <%= link_to "出品する", new_product_path %>
+                                        <%= link_to "出品する", new_product_path ,class: "header-log2" %>
                                     </li>
 
                                     <li>
-                                        <%= link_to "新規登録", new_user_registration_path %>
+                                        <%= link_to "新規登録", new_user_registration_path ,class: "header-log2"%>
                                     </li>
                                     <li>
-                                        <%= link_to "ログイン", new_user_session_path %>
+                                        <%= link_to "ログイン", new_user_session_path ,class: "header-log2"%>
                                     </li>
                                  <%end%>
                 </ul>

@@ -1,67 +1,37 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-
-
-
 .disabled { padding-left: 90px; cursor: pointer ;}
 .navbar-brand .topnav  h2 { margin-bottom: 30px; }
-
 .profile-box {
 }
-
 .top_header { background-image: url("1024-cc-library010005268.jpg");
-
 background-repeat: no-repeat;
  background-position: center center;
   background-size: cover;
   height: 1000px;
-  margin-top: 90px;
-}
-
-
-
-
-
-
-
-
-
-
-
+  margin-top: 90px;}
 body {
-
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-
-}
-
+  -o-background-size: cover;}
 .panel-default {
 opacity: 0.9;
 margin: 150px auto 200px  ;
 }
 .form-group.last { margin-bottom:0px; }
-
-
-
-
-
-.row { margin: 0 auto;
- }
-
-
-.dropdown { float: left; margin-top: 5px;}
-
-
+.row { margin: 0 auto;}
+.dropdown { float: left; margin-top: 10px;}
 .top_header_product { background-image: url("1024-cc-library010005268.jpg");
-
 background-repeat: no-repeat;
  background-position: center center;
   background-size: cover;
   height: 1600px;
   margin-top: 90px;
 }
+#search_form_box { margin-top: 15px;}
+.header-pro { margin-top: 3px;}
+.btn-search { backgroung-color: gray;}
+#search_form_box { border-radius: 10px;}
+.header-log2 { margin-top: 5px;}
 

@@ -1,24 +1,19 @@
 class ProductsController < ApplicationController
   def show
-
   end
-
   def new
-  @product = Product.new
-
+    @product = Product.new
   end
-
   def create
     @product = Product.create(create_params)
-
-    # redirect_to controller: :top, action: :index
   end
-
-
   def edit
   end
-
   def updates
+  end
+  def search
+ 
+      @products = Product.where('text_name LIKE(?)', "%#{params[:q]}%").order('id DESC').limit(16).page(params[:page]).per(9)
   end
 
   private

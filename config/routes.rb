@@ -7,11 +7,12 @@ Rails.application.routes.draw do
   resources :sciences, only: [:index, :show]
   resources :technos, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
-  resources :products, only: [:show, :edit, :update, :new, :create]
+  resources :products, only: [:show, :edit, :update, :new, :create]do
+    collection do
+      post 'search'
+    end
+  end  
 
   root 'top#index'
 end
-
-
-
 
