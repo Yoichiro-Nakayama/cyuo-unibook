@@ -5,47 +5,81 @@
 
               <div class="panel panel-default">
                   <div class="panel-heading">
-                    ユーザー情報</div>
+                    出品情報</div>
                       <div class="panel-body">
 
+
+
+                     <% if @product.errors.any? %>
+
+                      <div id="error_explanation">
+                        <h2><%= @product.errors.count %>件のエラーがあります。</h2>
+
+                        <ul>
+                        <% @product.errors.full_messages.each do |msg| %>
+                          <li><%= msg %></li>
+                        <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+
+
+
+
                   <%= form_for @product  do |f| %>
-                        <h2>出品情報</h2>
+                        <h2>商品の説明</h2>
                           <div class="form-group">
                             <div class="col-lg-12">
                              <p>教科書画像</p>
                                 <div class="form-group file">
                                   <%= f.file_field :image_url, class: "form-control floating-label", placeholder: "画像アップロード" %>
                                 </div>
-                              </div>
+                            </div>
 
 
-                      <div class="col-lg-12">
-                        <p>値段</p>
-                           <%= f.text_field :price, placeholder: "値段", class: "form-control" %>
-                         </div>
 
-                              <div class="col-lg-12">
-                             <p>学部</p>
-                            <%= f.select :price , [['法学部','法学部'],['商学部','商学部'],['経済学部','経済学部'],['文学部','文学部'],['総合政策学部','総合政策学部'],['理工学部','理工学部']] %>
-                              </div>
+                            <div class="col-lg-12">
+                              <p>値段</p>
+                              <%= f.text_field :price, placeholder: "値段", class: "form-control" %>
+                            </div>
 
-                           <div class="col-lg-12">
-                             <p>送料負担</p>
-                            <%= f.select :price , [['販売者負担','販売者負担'],['買い手負担','買い手負担'],['大学で手渡し0円','大学で手渡し0円']] %>
-                           </div>
+                            <div class="col-lg-12">
+                              <p>教科書名</p>
+                              <%= f.text_field :text_name, placeholder: "教科書名", class: "form-control" %>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                              <p>詳細</p>
+                              <%= f.text_field :detail, placeholder: "商品詳細", class: "form-control" %>
+                            </div>
+
+                            <div class="col-lg-12">
+                              <p>教授名</p>
+                              <%= f.text_field :professor, placeholder: "教授名", class: "form-control" %>
+                            </div>
 
                              <div class="col-lg-12">
-                             <p>配送方法</p>
+                                <p>学部</p>
+                                <%= f.select :faculty , [['法学部','low'],['商学部','commerce'],['経済学部','economicse'],['文学部','literature'],['総合政策学部','science'],['理工学部','techno']] %>
+                             </div>
 
-                            <%= f.select :price , [['大学で手渡し0円','大学で手渡し0円'],['商学部','商学部'],['経済学部','経済学部']] %>
+                             <div class="col-lg-12">
+                               <p>送料負担</p>
+                               <%= f.select :sent_price , [['販売者負担','seller'],['買い手負担','buyer'],['大学で手渡し0円','college']] %>
+                             </div>
+
+                             <div class="col-lg-12">
+                               <p>配送方法</p>
+                               <%= f.select :sent_method , [['大学で手渡し0円','incollege'],['配送(約200~300円,定形外郵便物,ゆうパック等)','sentmethod'],] %>
                              </div>
 
 
-                            <%= f.submit "出品する", class: "btn btn-primary withripple maipe-ji" %>
+                               <%= f.submit "出品する", class: "btn btn-primary withripple maipe-ji" %>
                           </div>
 
 
-                       <% end %>
+                    <% end %>
 
 
                       </div>
