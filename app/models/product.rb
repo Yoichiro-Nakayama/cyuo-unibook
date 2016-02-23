@@ -11,6 +11,7 @@ class Product < ActiveRecord::Base
 
   # validate :add_error_sample
 
+
   #   def add_error_sample
   #     nameが空のときにエラーメッセージを追加する
   #     if text_name.empty?
