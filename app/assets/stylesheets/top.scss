@@ -1,7 +1,7 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.disabled { padding-left: 90px; cursor: pointer ;}
+.disabled { padding-left: 90px; cursor: pointer ; color: black; }
 .navbar-brand .topnav  h2 { margin-bottom: 30px; }
 .profile-box {
 }
@@ -26,7 +26,7 @@ margin: 150px auto 200px  ;
 background-repeat: no-repeat;
  background-position: center center;
   background-size: cover;
-  height: 1600px;
+  height: 1800px;
   margin-top: 90px;
 }
 #search_form_box { margin-top: 15px;}
@@ -35,3 +35,15 @@ background-repeat: no-repeat;
 #search_form_box { border-radius: 10px;}
 .header-log2 { margin-top: 5px;}
 
+.top_header_show { 
+  background-image: url("1024-cc-library010005268.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 1000px;
+  margin-top: 70px;
+}
+
+.navbar-default {
+  background-color: red !important;
+}

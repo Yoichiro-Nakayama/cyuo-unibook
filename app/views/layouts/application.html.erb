@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>UNIBOOK</title>
-<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
-<!DOCTYPE html>
+    <title>UNIBOOK</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!DOCTYPE html>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,120 +23,144 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-<!-- <script type="text/javascript" src="js/jquery-fixHeightSimple.js"></script> -->
-</head>
-<body data-no-turbolink="true">
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- <a class="navbar-brand topnav" href="root_path"><h2>UNIBOOK</h2></a> -->
-                <%= link_to root_path, class: "navbar-brand topnav" do %>
+        <![endif]-->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+        <!-- <script type="text/javascript" src="js/jquery-fixHeightSimple.js"></script> -->
+    </head>
+    <body data-no-turbolink="true">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- <a class="navbar-brand topnav" href="root_path"><h2>UNIBOOK</h2></a> -->
+                    <%= link_to root_path, class: "navbar-brand topnav" do %>
                     <h2>UNIBOOK</h2>
-                <% end %>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   <li>
+                    <% end %>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                     <li>
                         <!-- <div id="search_form_box">
                             <form class="form-search" action="products/search" method="get" role="search">
                             <input class="input-medium search-query" name="q" placeholder="キーワードから探す" type="text" value="<%= params[:q] %>">
                             <input class="btn-search" alt="検索" value="検索" type="submit">
                             </form>
                         </div>
- -->
-                          <div id="search_form_box">
-                            <%= form_tag( '/products/search', method: :post) do %>
-                            <input class="input-medium search-query" name="q" placeholder="教科書名で検索する" type="text" value="<%= params[:q] %>">
-                            <input class="btn-search" alt="検索" value="検索" type="submit">
-                            <% end %>
-                        </div>
- 
-                    </li>
-                    <% if user_signed_in? %>
-                        <li>
-                            <%= link_to "出品する", new_product_path, class: "header-pro" %>
-                        </li>
-                            <div class="dropdown">
-                              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                マイページ
-                                <span class="caret"></span>
-                              </button>
-                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                              <li><%= link_to "マイページ",user_path(current_user) %></li>
-                                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-                                <li><%= link_to "取引中","#" %></li>
-                                <li><%= link_to "出品中","#" %></li>
-                              </ul>
-                            </div>
-                                 <%else%>
-                                    <li>
-                                        <%= link_to "出品する", new_product_path ,class: "header-log2" %>
-                                    </li>
+                    -->
+                    <div id="search_form_box">
+                        <%= form_tag( '/products/search', method: :post) do %>
+                        <input class="input-medium search-query" name="q" placeholder="教科書名で検索する" type="text" value="<%= params[:q] %>">
+                        <input class="btn-search" alt="検索" value="検索" type="submit">
+                        <% end %>
+                    </div>
 
-                                    <li>
-                                        <%= link_to "新規登録", new_user_registration_path ,class: "header-log2"%>
-                                    </li>
-                                    <li>
-                                        <%= link_to "ログイン", new_user_session_path ,class: "header-log2"%>
-                                    </li>
-                                 <%end%>
-                </ul>
-            </div>
-              <ul class="nav nav-pills">
-        <li  role="presentation" class="disabled" ><%= link_to "法学部", laws_path %></li>
-        <li role="presentation" class="disabled" ><%= link_to "商学部", commerces_path %></li>
-        <li role="presentation" class="disabled" ><%= link_to "経済学部", economicses_path %></li>
-        <li role="presentation" class="disabled" ><%= link_to "文学部", literatures_path %></li>
-        <li role="presentation" class="disabled" ><%= link_to "総合政策学部", sciences_path %></li>
-        <li role="presentation" class="disabled" ><%= link_to "理工学部", technos_path %></li>
-      </ul>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+                </li>
+                <% if user_signed_in? %>
+                <li>
+                    <%= link_to "出品する", new_product_path, class: "header-pro" %>
+                </li>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    マイページ
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><%= link_to "マイページ",user_path(current_user) %></li>
+                  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                  <li><%= link_to "取引中","#" %></li>
+                  <li><%= link_to "出品中","#" %></li>
+              </ul>
+          </div>
+          <%else%>
+          <li>
+            <%= link_to "出品する", new_product_path ,class: "header-log2" %>
+        </li>
+
+        <li>
+            <%= link_to "新規登録", new_user_registration_path ,class: "header-log2"%>
+        </li>
+        <li>
+            <%= link_to "ログイン", new_user_session_path ,class: "header-log2"%>
+        </li>
+        <%end%>
+    </ul>
+</div>
+
+
+<nav class="" role="navigation">
+    <div class="container topnav">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+        <ul class="nav nav-pills">
+            <li  role="presentation" class="disabled" ><%= link_to "法学部", laws_path %></li>
+            <li role="presentation" class="disabled" ><%= link_to "商学部", commerces_path %></li>
+            <li role="presentation" class="disabled" ><%= link_to "経済学部", economicses_path %></li>
+            <li role="presentation" class="disabled" ><%= link_to "文学部", literatures_path %></li>
+            <li role="presentation" class="disabled" ><%= link_to "総合政策学部", sciences_path %></li>
+            <li role="presentation" class="disabled" ><%= link_to "理工学部", technos_path %></li>
+        </ul> 
+
+    </div>
+</div>
+
+
+
+
+
+
+<!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
 <%= bootstrap_flash %>
-  <%= yield %>
+<%= yield %>
 <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-inline">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
             </div>
         </div>
-    </footer>
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    </div>
+</footer>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

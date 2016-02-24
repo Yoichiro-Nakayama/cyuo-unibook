@@ -19,9 +19,10 @@
                         <div class="thumbnail">
                          <%= image_tag  product.image_url %>
                           <div class="caption">
-                            <h4><%= product.text_name %></h4>
-                            <h4><%= product.professor %></h4>
-                            <p><%= product.price %>円</p>
+                          　<h4>大学:<%= product.univercity %></h4>
+                            <h4>教科書:<%= product.text_name %></h4>
+                            <h4>教授:<%= product.professor %></h4>
+                            <p>値段:<%= product.price %>円</p>
                             <p><%= link_to "詳細を見る", "#" , class: "btn btn-primary", role: "button"%></p>
                           </div>
                         </div>
