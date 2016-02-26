@@ -15,7 +15,7 @@
                             <h4>教科書:<%= product.text_name %></h4>
                             <h4>教授:<%= product.professor %></h4>
                             <p>値段:<%= product.price %>円</p>
-                          <p><%= link_to "詳細を見る", "#" , class: "btn btn-primary", role: "button"%></p>
+                         <p><%= link_to "詳細を見る",  techno_path(product.id) , class: "btn btn-primary", role: "button"%></p>
                          </div>
                         </div>
                        </div>

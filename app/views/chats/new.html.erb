@@ -1,0 +1,29 @@
+<!-- <div class="chat_header">
+</div>    -->
+
+
+<div class="center-block">
+  <div class="top_header_product">
+    <div class="container">
+      <div class="row">
+         <div class=" .col-xs-6 .col-xs-offset-3">
+           <div class="panel panel-default">
+              <%= form_for [@product, @chat]  do |f| %>
+              <h2> <%= f.submit "出品者にメッセージを送る" ,class: "submitchat" %>　 </h2> 
+              <%= hidden_field_tag(:seller_id, @product.user.id) %>
+              <%= hidden_field_tag(:buyer_id, current_user.id) %>
+              <% end %> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+ 
+ 

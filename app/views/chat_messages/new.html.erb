@@ -1,0 +1,10 @@
+<div class="top_header_chat">
+  <div class="posting_form">
+
+    <%= form_for [@product, @chat, @chat_message ]  do |f| %>
+      <%= f.text_field :message, class: "topcomment", placeholder: "相手にメッセージを送ろう！" %>  
+      <%= hidden_field_tag(:seller_id, @product.user.id) %>
+      <%= f.submit "送信" ,class: "submittopcomment" %>
+    <% end %>
+　</div>
+</div>

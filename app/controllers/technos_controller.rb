@@ -4,6 +4,7 @@ class TechnosController < ApplicationController
     @products = Product.理工学部.order('id DESC').page(params[:page]).per(9)
   end
   def show
+    @products = Product.find(params[:id])
   end
 end
 

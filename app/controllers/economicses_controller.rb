@@ -5,6 +5,7 @@ class EconomicsesController < ApplicationController
   end
 
   def show
+     
+    @products = Product.find(params[:id])
   end
 end
-

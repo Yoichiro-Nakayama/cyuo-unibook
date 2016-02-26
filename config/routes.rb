@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   resources :technos, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
   resources :products, only: [:show, :edit, :update, :new, :create]do
-    collection do
+   collection do
       post 'search'
     end
-  end  
-
+     resources :chats, only: [:show, :create, :new]do
+       resources :chat_messages, only: [:new, :show, :create]
+   
+    end  
+  end
   root 'top#index'
 end
-

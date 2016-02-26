@@ -47,3 +47,44 @@ background-repeat: no-repeat;
 .navbar-default {
   background-color: red !important;
 }
+
+.top_header_chat { 
+  text-align: center; 
+  height: 4000px; 
+  background-color: gray;
+  margin-top: 90px;
+}
+
+.topcomment { width: 400px; height: 60px; border-radius: 5px;}
+
+.chat_header { 
+  background-color: gray; 
+  height: 120px;
+}
+
+.submittopcomment { width: 50px; height: 60px; border-radius: 5px;}
+      
+
+   .user_info {
+    display: inline-block;
+    margin-left: 10px;
+    time {
+      color: gray;
+      font-size: .8em;
+      display: block;
+    }
+  }
+ .col-lg-3 { 
+  background-color: white;
+}
+
+.posting_form {
+  padding-top: 50px;
+  }
+.submitchat {
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px; 
+}
