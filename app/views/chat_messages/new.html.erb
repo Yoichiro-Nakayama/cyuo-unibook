@@ -1,16 +1,25 @@
 <div class="top_header_chat">
   <div class="posting_form">
-
     <%= form_for [@product, @chat, @chat_message ]  do |f| %>
       <%= f.text_field :message, class: "topcomment", placeholder: "相手にメッセージを送ろう！" %>  
       <%= hidden_field_tag(:seller_id, @product.user.id) %>
       <%= f.submit "送信" ,class: "submittopcomment" %>
-    <% end %>
+    <% end %> 
 
+   
+    <% @chats.each do |message|%>
+     <div class="message_top">
+       <div class="message_contents">
+    <%= message.message%>
+       </div>
+     </div>
+       </br>
+       </br>
+       </br>
+       </br>
 
+    <%end%>
 
-
-<!--     <div class="comment-shape">初めまして</div>
- -->
 　</div>
 </div>
+<!-- if @chat.seller_id == @product.user.id %> -->
