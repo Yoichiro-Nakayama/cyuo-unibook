@@ -8,22 +8,26 @@
       <div class="row">
          <div class=" .col-xs-6 .col-xs-offset-3">
            <div class="panel panel-default">
+
+  　　　　　　　　<h2>出品者との取引の流れ</h2>
+  　　　　　　　　　<ul>
+                  <li>１.購入者と販売者の間でメッセージを送ります。</li>
+                  <li>２.取引内容の確認をしましょう（商品の金額、発送方法、振込先等）。</li>
+                  <li>３.代金の振込先、または取引の場所を話し合いメッセージで決めてください。</li>
+                  <li>４.お金の振込、商品の受け取りが確認できたらメッセージを送りましょう。</li>
+                  <li>５.取引が終わったらメッセージ画面にある取引が終了したというボタンを押してください。</li>
+                 </ul>
+          
               <%= form_for [@product, @chat]  do |f| %>
               <h2> <%= f.submit "出品者にメッセージを送る" ,class: "submitchat" %>　 </h2> 
               <%= hidden_field_tag(:seller_id, @product.user.id) %>
               <%= hidden_field_tag(:buyer_id, current_user.id) %>
               <% end %> 
+
+              
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
- 
- 
