@@ -28,4 +28,3 @@ end
 # .where(buyer_id: current_user.id, seller_id: product.user.id )
 # params[:seller_id].to_i == @product.user.id && current_user.id == params[:buyer_id].to_i
 # Chat.find_by(seller_id: params[:seller_id], buyer_id: params[:buyer_id]).exists?
-

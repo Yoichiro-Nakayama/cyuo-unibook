@@ -10,8 +10,5 @@ class User < ActiveRecord::Base
 
   has_many :products
   has_many :chats
- 
-
+  has_many :chat_messages
 end
-
-

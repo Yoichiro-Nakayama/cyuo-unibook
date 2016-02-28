@@ -50,7 +50,7 @@ background-repeat: no-repeat;
 
 .top_header_chat { 
   text-align: center; 
-  height: 4000px; 
+  height: 6000px; 
   background-color: gray;
   margin-top: 90px;
 }
@@ -99,9 +99,8 @@ background-color: white;
 
 .message_contents { 
   width: 400px;
-  height: 40px;
+  height: 80px;
   background-color: white;
-  // padding-bottom: 20px;
   padding-top: 0px;
   margin-left: 200px;
   margin-top: 20px;
@@ -110,4 +109,19 @@ background-color: white;
 
 .message_top {
   width: 100%;
+}
+
+.message_contents_buyer {
+  width: 400px;
+  height: 80px;
+  background-color: white;
+  padding-top: 0px;
+  margin-left: 800px;
+  margin-top: 20px;
+}
+
+.top_header_chat { background-image: url("1024-cc-library010005268.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+    background-size: cover;
 }

@@ -1,0 +1,30 @@
+<div class="center-block">
+<div class="top_header_product">
+  <div class="container">
+      <div class="row">
+         <div class=" .col-xs-6 .col-xs-offset-3">
+              <div class="panel panel-default">
+         <div class="col-md-12">
+                    <% @chats.each do |chat|%>
+         <div class="col-md-4">
+                     <div class="row">
+                    <!--   <div class="col-sm-6 col-md-4"> -->
+                        <div class="thumbnail">
+                         <%= image_tag  chat.product.image_url %>
+                          <div class="caption">
+                          　 <h4>大学:<%= chat.product.univercity %></h4>
+                            <h4>教科書:<%= chat.product.text_name %></h4>
+                            <h4>教授:<%= chat.product.professor %></h4>
+                            <p>値段:<%= chat.product.price %>円</p>
+                            <p><%= link_to "メッセージを見る", "#" , class: "btn btn-primary", role: "button"%></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                 <% end %>
+                        </div>
+                   </div>
+              </div>
+          </div>
+      </div>
+</div>

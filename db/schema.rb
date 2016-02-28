@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160226024858) do
+ActiveRecord::Schema.define(version: 20160228040359) do
 
   create_table "chat_messages", force: :cascade do |t|
     t.text     "message",    limit: 65535
-    t.integer  "buyer_id",   limit: 4
-    t.integer  "seller_id",  limit: 4
     t.integer  "chat_id",    limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "product_id", limit: 4
+    t.integer  "user_id",    limit: 4
   end
 
   create_table "chats", force: :cascade do |t|
