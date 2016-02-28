@@ -1,6 +1,6 @@
 class DealsController < ApplicationController
   def show
-    @chats = Chat.where(["buyer_id = ? or seller_id = ?", current_user.id, current_user.id])
-    @products = @chats.product
-  end  
+    @chats_contents = Chat.where(["buyer_id = ? or seller_id = ?", current_user.id, current_user.id]).order('created_at DESC')
+    @products = @chats_contents.product
+  end
 end
