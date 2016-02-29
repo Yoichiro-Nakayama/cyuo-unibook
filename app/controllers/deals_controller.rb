@@ -7,6 +7,7 @@ class DealsController < ApplicationController
     @chat = Chat.find(params[:id])
     if @chat.buyer_id == current_user.id || @chat.seller_id == current_user.id
            @chat.destroy
+           
     end
     redirect_to controller: :deals, action: :show
   end

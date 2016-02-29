@@ -10,7 +10,6 @@ class ChatMessagesController < ApplicationController
     redirect_to controller: :chat_messages, action: :new
   end
 
-  
 
 
  private

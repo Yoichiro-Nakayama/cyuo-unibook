@@ -55,6 +55,5 @@ end
   gem 'twitter-bootstrap-rails'
   gem 'bootstrap-material-design', '0.1.4'
   gem 'jquery-turbolinks'
- 
-
+ gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 

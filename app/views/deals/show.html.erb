@@ -16,8 +16,11 @@
                             <h4>教科書:<%= chat.product.text_name %></h4>
                             <h4>教授:<%= chat.product.professor %></h4>
                             <p>値段:<%= chat.product.price %>円</p>
-                            <p><%= link_to "メッセージを見る", new_product_chat_chat_message_path(chat.product.id, chat.id) , class: "btn btn-primary", role: "button"%></p>
-                              <p><%= link_to "削除する", deal_path(chat.id) , method: :delete, class: "btn btn-primary", role: "button"%></p>
+                            <p><%= link_to "メッセージを見る", new_product_chat_chat_message_path(chat.product.id, chat.id) , class: "btn btn-primary", role: "button" %></p>
+                            <p><%= link_to "削除する", deal_path(chat.id), method: :delete,  class: "btn btn-primary", role: "button", data: { confirm: "本当に削除してよろしいですか？",
+                                                                                   "commit" => "削除する",
+                                                                                   "cancel" => "やっぱりやめる",
+                                                                                   }, title: "削除の確認"%></p>
                           </div>
                         </div>
                       </div>
