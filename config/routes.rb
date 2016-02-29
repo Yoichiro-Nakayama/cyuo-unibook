@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     end
      resources :chats, only: [:show, :create, :new]do
        resources :chat_messages, only: [:new, :show, :create]
-   
     end  
   end
   root 'top#index'

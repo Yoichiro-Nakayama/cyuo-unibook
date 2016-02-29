@@ -56,4 +56,8 @@ end
   gem 'bootstrap-material-design', '0.1.4'
   gem 'jquery-turbolinks'
  gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
+ 
+ group :production, :staging do
+  gem 'rails_12factor'
+end
 
