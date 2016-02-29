@@ -22,10 +22,12 @@
                             <h4>教授:<%= product.professor %></h4>
                             <p>値段:<%= product.price %>円</p>
                             <p><%= link_to "編集する", edit_product_path(product.id) , class: "btn btn-primary", role: "button"%></p>
+                             <%= link_to "削除する",  product_path(product.id) , method: :delete, class: "btn btn-primary", role: "button"%>
+
+
                           </div>
                         </div>
                       </div>
-
 
                     </div>
 

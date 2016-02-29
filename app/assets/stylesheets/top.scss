@@ -51,14 +51,14 @@ background-repeat: no-repeat;
 .top_header_chat { 
   text-align: center; 
   height: 6000px; 
-  background-color: gray;
+  // background-color: gray;
   margin-top: 90px;
 }
 
 .topcomment { width: 400px; height: 60px; border-radius: 5px;}
 
 .chat_header { 
-  background-color: gray; 
+  // background-color: gray; 
   height: 120px;
 }
 
@@ -125,3 +125,6 @@ background-color: white;
   background-position: center center;
     background-size: cover;
 }
+
+
+
