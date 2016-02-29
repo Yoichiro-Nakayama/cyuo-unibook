@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :sciences, only: [:index, :show]
   resources :technos, only: [:index, :show]
   resources :users, only: [:show, :edit, :update]
-  resources :deals, only: [:show]
+  resources :deals, only: [:show, :destroy]
   resources :products, only: [:show, :edit, :update, :new, :create, :index, :destroy]do
    collection do
       post 'search'

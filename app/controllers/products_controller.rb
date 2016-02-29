@@ -20,9 +20,24 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
+    @chats = Chat.where(product_id: params[:id])
+
+    @chat_messages = ChatMessage.where(product_id: params[:id])
+
       if @product.user_id == current_user.id
          @product.destroy
       end
+      if @product.user_id == current_user.id && @chats.exists? 
+          @chats.each do |chat| 
+          chat.destroy
+          end 
+      end
+      if   @product.user_id == current_user.id && @chat_messages.exists?
+         @chat_messages.each do |chat_message|
+         chat_message.destroy
+         end
+      end
+       redirect_to controller: :products, action: :index
   end
 
 

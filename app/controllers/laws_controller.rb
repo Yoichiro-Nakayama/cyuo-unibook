@@ -9,3 +9,4 @@ class LawsController < ApplicationController
   end
 end
 
+

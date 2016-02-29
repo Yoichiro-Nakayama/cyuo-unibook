@@ -17,6 +17,7 @@
                             <h4>教授:<%= chat.product.professor %></h4>
                             <p>値段:<%= chat.product.price %>円</p>
                             <p><%= link_to "メッセージを見る", new_product_chat_chat_message_path(chat.product.id, chat.id) , class: "btn btn-primary", role: "button"%></p>
+                              <p><%= link_to "削除する", deal_path(chat.id) , method: :delete, class: "btn btn-primary", role: "button"%></p>
                           </div>
                         </div>
                       </div>

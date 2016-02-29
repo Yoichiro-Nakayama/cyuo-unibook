@@ -9,6 +9,10 @@ class ChatMessagesController < ApplicationController
     @chat_message = ChatMessage.create(create_params)
     redirect_to controller: :chat_messages, action: :new
   end
+
+  
+
+
  private
   def create_params
     params.require(:chat_message).permit(:message).merge( product_id: params[:product_id], chat_id: params[:chat_id], user_id: current_user.id )
