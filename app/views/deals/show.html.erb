@@ -10,9 +10,10 @@
                      <div class="row">
                     <!--   <div class="col-sm-6 col-md-4"> -->
                         <div class="thumbnail">
-                         <%= image_tag  chat.product.image_url %>
+                        
+                         <%= image_tag  (chat.product.authenticated_image_url(:medium)) %>
                           <div class="caption">
-                          　 <h4>大学:<%= (chat.authenticated_image_url) %></h4>
+                          　 <h4>大学:<%= chat.product.univercity %></h4>
                             <h4>教科書:<%= chat.product.text_name %></h4>
                             <h4>教授:<%= chat.product.professor %></h4>
                             <p>値段:<%= chat.product.price %>円</p>
