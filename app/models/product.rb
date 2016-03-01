@@ -5,7 +5,9 @@ class Product < ActiveRecord::Base
   enum faculty: { 法学部: 0, 商学部: 1, 経済学部: 2, 文学部: 3, 総合政策学部: 4, 理工学部: 5}
   validates_presence_of :text_name, :image_url, :price, :detail
  # attr_accessible :image_url
-  has_attached_file :image_url, styles: { medium: "300x300>", thumb: "100x100>" }
+  has_attached_file :image_url, styles: { medium: "300x300>", thumb: "100x100>" },:storage => :s3,
+:s3_credentials => "#{Rails.root}/config/s3.yml",
+:path => ":attachment/:id/:style.:extension"
   # , default_url: "/system/missing/:style/missing.jpg"
  validates_attachment_content_type :image_url, content_type: ["image/jpg","image/jpeg","image/png"]
   # validates_attachment :image_url, content_type: ["image/jpg","image/jpeg","image/png"]
