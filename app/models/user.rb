@@ -14,6 +14,11 @@ class User < ActiveRecord::Base
 
   validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]
 
+
+  def authenticated_image_url(style)
+    avatar.s3_object(style).url_for(:read, :secure => true)
+  end
+
   has_many :products
   has_many :chats
   has_many :chat_messages

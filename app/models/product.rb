@@ -29,7 +29,9 @@ class Product < ActiveRecord::Base
   #   end
 # validates_acceptance_of :terms_of_service
 #  validates_acceptance_of :text_name, message: '記入してください'
-
+def authenticated_image_url(style)
+    image_url.s3_object(style).url_for(:read, :secure => true)
+  end
 end
 
 
