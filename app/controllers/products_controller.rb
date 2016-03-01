@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: :new
   def index
     @products = current_user.products.order('id DESC').page(params[:page]).per(9)
   end  
