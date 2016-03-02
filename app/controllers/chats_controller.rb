@@ -3,12 +3,10 @@ class ChatsController < ApplicationController
     @product = Product.find(params[:product_id])
     @chat = Chat.new
   end  
-
   def show
      @product = Product.find(params[:product_id])
   end
   def create
-
     @product = Product.find(params[:product_id])
     if Chat.find_by(seller_id: params[:seller_id], buyer_id: params[:buyer_id], product_id: params[:product_id]).present?
       @chat = Chat.find_by(seller_id: params[:seller_id], buyer_id: params[:buyer_id], product_id: params[:product_id])
