@@ -10,22 +10,24 @@
       <% @chats.each do |message|%>
      
        <% if @chat.seller_id == message.user_id %>
-<div class="panel panel-default">
-  <div class="panel-body">
+       
+<div class="panel panel-default" style="word-wrap:break-word;" >
+  <div class="panel-body"> 
     <!-- 
          <div class="message_top"> -->
-          
+       
 
           <!--  <div class="message_contents"> --> 
           名前:<%= message.user.nickname%>
           </br>
             <%= message.message %>
-            </div>
+         
+ </div>
 </div>
           
        <% else %>
-      <div class="panel panel-default">
-  <div class="panel-body">
+    <div class="panel panel-default" style="word-wrap:break-word;" >
+  <div class="panel-body"> 
 
          <!--  <div class="message_top "> -->
            
@@ -33,8 +35,10 @@
             名前:<%= message.user.nickname%>
           </br> 
             <%= message.message %>
-        </div>
+       </div>
+
 </div>
+
          <%end%>
       <%end%>
        </div>
