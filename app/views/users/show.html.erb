@@ -1,20 +1,4 @@
 
-<!-- 
-<div class="row form user_profile">
-
-  <div class="col-lg-12"></div>></br></br></br></br>
-  <div class="intro-size">
-   <div class="profile-page">
-     <h2> ニックネーム</h2>
-    <p class="intro-size"><%= @user.nickname %><span></p>
-    <h2>学部</h2>
-       <p class="intro-size"><%= @user.major %><span></p>
-       <h2>自己紹介</h2>
-       <p class="intro-size"><%= @user.introduce %><span></p>
-     </div>
-  </div>
-</div> -->
-
 <div class="top_header">
 <div class="container">
     <div class="row">
@@ -26,9 +10,9 @@
 
                       <div class="field">
                       <span class="intro-size">プロフィール画像</span></br>
-                        <div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div>
-                        </div>
+                        <div class="image" style="background-image: url(<%= (@user.avatar) %>);"></div> 
 
+                        </div>
 
                       <div class="field">
                       <span class="intro-size">ニックネーム</span></br>

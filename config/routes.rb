@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  resources :top, only: [:new]
   resources :laws, only: [:index, :show]
   resources :commerces, only: [:index, :show]
   resources :economicses, only: [:index, :show]
@@ -18,3 +19,4 @@ Rails.application.routes.draw do
   end
   root 'top#index'
 end
+

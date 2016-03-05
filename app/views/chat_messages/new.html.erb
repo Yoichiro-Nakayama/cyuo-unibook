@@ -6,26 +6,42 @@
        <%= hidden_field_tag(:product_id, @product.id) %>
       <%= f.submit "送信" ,class: "submittopcomment" %>
     <% end %> 
+
       <% @chats.each do |message|%>
+     
        <% if @chat.seller_id == message.user_id %>
-         <div class="message_top">
-           <div class="message_contents">
+       
+<div class="panel panel-default" style="word-wrap:break-word;" >
+  <div class="panel-body"> 
+    <!-- 
+         <div class="message_top"> -->
+       
+
+          <!--  <div class="message_contents"> --> 
           名前:<%= message.user.nickname%>
           </br>
             <%= message.message %>
-           </div>
-         </div>
+         
+ </div>
+</div>
+          
        <% else %>
-          <div class="message_top">
-            <div class="message_contents_buyer">
+    <div class="panel panel-default" style="word-wrap:break-word;" >
+  <div class="panel-body"> 
+
+         <!--  <div class="message_top "> -->
+           
+           <!--  <div class="message_contents_buyer "> -->
             名前:<%= message.user.nickname%>
           </br> 
             <%= message.message %>
-          </div>
-         </div>
+       </div>
+
+</div>
+
          <%end%>
       <%end%>
-　</div>
+       </div>
 </div>
 
 

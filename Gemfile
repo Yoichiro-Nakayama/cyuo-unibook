@@ -61,3 +61,4 @@ end
   gem 'rails_12factor'
 end
 
+gem 'aws-sdk', '< 2.0'
