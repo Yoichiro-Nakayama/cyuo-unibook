@@ -1,4 +1,8 @@
 
 /config/s3.yml
 
+/mailers/application_mailer.rb
+
+/config/environments/development.rb
+
 
