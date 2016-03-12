@@ -7,7 +7,7 @@ class ChatMessagesController < ApplicationController
   end  
   def create
     @chat = Chat.find(params[:chat_id])
-    @product = Product.find(params[:product_id])
+   
      if current_user.id == @chat.buyer_id
      @user_id = @chat.seller_id
      else 
@@ -15,7 +15,8 @@ class ChatMessagesController < ApplicationController
      end
 
     @user = User.find(@user_id)
-    @mail = UserMailer.complete_review(@user, @product, @chat)
+
+    @mail = UserMailer.complete_review(@user)
     @chat_message = ChatMessage.create(create_params)
     @mail.deliver # if Rails.env.production?
     redirect_to controller: :chat_messages, action: :new
