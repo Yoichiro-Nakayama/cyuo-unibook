@@ -26,6 +26,7 @@
         <![endif]-->
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
         <!-- <script type="text/javascript" src="js/jquery-fixHeightSimple.js"></script> -->
+        <%= analytics_init if Rails.env.production? %>
     </head>
     <body data-no-turbolink="true">
         <!-- Navigation -->
@@ -66,6 +67,7 @@
                 <li>
                     <%= link_to "出品する", new_product_path, class: "header-pro" %>
                 </li>
+
                 <div class="dropdown">
                   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     マイページ
@@ -93,7 +95,7 @@
     </ul>
 </div>
 
-
+ <div class="navbar-header">
 <nav class="" role="navigation">
     <div class="container topnav">
 
@@ -123,6 +125,7 @@
 </div>
 <!-- /.container -->
 </nav>
+</div>
 <%= bootstrap_flash %>
 <%= yield %>
 <footer>

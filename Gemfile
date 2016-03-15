@@ -62,3 +62,4 @@ end
 end
 
 gem 'aws-sdk', '< 2.0'
+gem 'google-analytics-rails'
