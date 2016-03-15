@@ -20,3 +20,4 @@ Rails.application.routes.draw do
   root 'top#index'
 end
 
+# git push heroku master
