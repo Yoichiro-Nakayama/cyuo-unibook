@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   has_many :chats
 
 
-  enum faculty: { 法学部: 0, 商学部: 1, 経済学部: 2, 文学部: 3, 総合政策学部: 4, 理工学部: 5}
+  enum faculty: { 法学部: 0, 商学部: 1, 経済学部: 2, 文学部: 3, 総合政策学部: 4, その他: 5}
   validates_presence_of :text_name, :image_url, :price, :detail
  # attr_accessible :image_url
   has_attached_file :image_url, styles: { medium: "300x300>", thumb: "100x100>" },:storage => :s3,
